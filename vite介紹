@@ -1,0 +1,20 @@
+package-lock.json、.gitignore(可以不用理他)
+assets(靜態檔案可放置這裡圖片圖片、JS、SCSS)
+layout的ejs(共用的地方共同管理)
+------------------------------------------------------------
+部屬: (修改vite.config.js)
+export default defineConfig({
+  // base 的寫法：
+  // base: '/Repository 的名稱/'
+  base: '/testvite/', -- 修改這裡
+  plugins: [
+    liveReload(['./layout/**/*.ejs', './pages/**/*.ejs', './pages/**/*.html']),
+    ViteEjsPlugin(),
+    moveOutputPlugin(),
+  ],
+  ----------------------------------------------------------
+  git init 
+git add .
+git commit -m "first commit"
+git remote add origin [GitHub Repositories Url]
+git push -u origin main
